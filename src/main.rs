@@ -2,6 +2,7 @@ fn main() {
     var_decl();
 }
 
+
 // https://fasterthanli.me/articles/a-half-hour-to-learn-rust
 
 fn var_decl(){
@@ -23,7 +24,7 @@ fn var_decl(){
     println!("{0}", x);
 
     let _ = 42;
-    let x  = is_divisible_by(10, 20);
+    let _  = is_divisible_by(10, 20);
 
 }
 
