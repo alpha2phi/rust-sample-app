@@ -3,6 +3,8 @@ fn main() {
 }
 
 
+// https://fasterthanli.me/articles/a-half-hour-to-learn-rust
+
 fn var_decl(){
     let x ;
     x = 42;
@@ -16,16 +18,24 @@ fn var_decl(){
     let x;
     // println!("{0}", x);
     x = 42;
+
+    let x;
+    x = 42;
+    println!("{0}", x);
+
+    let _ = 42;
+    let _  = is_divisible_by(10, 20);
+
 }
 
 
-// fn is_divisible_by(lhs: u32, rhs: u32) -> bool {
-//     if rhs == 0 {
-//         return false;
-//     }
+fn is_divisible_by(lhs: u32, rhs: u32) -> bool {
+    if rhs == 0 {
+        return false;
+    }
 
-//     lhs % rhs == 0
-// }
+    lhs % rhs == 0
+}
 
 // fn fizzbuzz(n: u32) -> () {
 //     if is_divisible_by(n, 15) {
