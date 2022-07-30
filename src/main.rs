@@ -1,65 +1,16 @@
-fn main() {
-    var_decl();
+use std::fmt;
+
+struct Circle {
+    radius: i32,
 }
 
-
-// https://fasterthanli.me/articles/a-half-hour-to-learn-rust
-
-fn var_decl(){
-    let x ;
-    x = 42;
-
-    let x = 42;
-
-    let x: i32;
-
-    let x: i32 = 42;
-
-    let x;
-    // println!("{0}", x);
-    x = 42;
-
-    let x;
-    x = 42;
-    println!("{0}", x);
-
-    let _ = 42;
-    let _  = is_divisible_by(10, 20);
-
-}
-
-
-fn is_divisible_by(lhs: u32, rhs: u32) -> bool {
-    if rhs == 0 {
-        return false;
+impl fmt::Display for Circle {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "Circle of radius {}", self.radius)
     }
-
-    lhs % rhs == 0
 }
 
-// fn fizzbuzz(n: u32) -> () {
-//     if is_divisible_by(n, 15) {
-//         println!("fizzbuzz");
-//     } else if is_divisible_by(n, 3) {
-//         println!("fizz");
-//     } else if is_divisible_by(n, 5) {
-//         println!("buzz");
-//     } else {
-//         println!("{}", n);
-//     }
-// }
-
-// fn fizzbuzz_to(n: u32) {
-//     for n in 1..n + 1 {
-//         fizzbuzz(n);
-//     }
-// }
-
-// #[cfg(test)]
-// mod tests {
-//     #[test]
-//     fn it_works() {
-//         assert_eq!(2 + 2, 4);
-//     }
-// }
-
+fn main() {
+    let circle = Circle { radius: 6 };
+    println!("{}", circle.to_string());
+}
